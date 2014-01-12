@@ -4,7 +4,6 @@ from kotocore.utils.constants import DEFAULT_RESOURCE_JSON_DIR
 from kotocore.exceptions import NoResourceJSONFound
 from kotocore.loader import ResourceJSONLoader
 
-print DEFAULT_RESOURCE_JSON_DIR
 
 from tests import unittest
 
@@ -35,7 +34,6 @@ class ResourceJSONLoaderTestCase(unittest.TestCase):
         )
 
         opts = self.test_loader.get_available_options('s3')
-        print opts
         self.assertTrue('2006-03-01' in opts)
         self.assertTrue(
             'data/aws/resources/s3-2006-03-01.json' in opts['2006-03-01'][0]
