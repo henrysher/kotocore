@@ -2,7 +2,7 @@ import logging
 
 
 __author__ = 'Amazon Web Services'
-__version__ = (0, 1, 1, 'alpha')
+__version__ = (0, 1, 2, 'alpha')
 
 
 def get_version(full=False):
@@ -30,8 +30,3 @@ class NullHandler(logging.Handler):
 log = logging.getLogger('kotocore')
 log.addHandler(NullHandler())
 # End logging setup.
-
-
-# A plain default ``Session`` (for convenience).
-from kotocore.session import Session
-session = Session()
